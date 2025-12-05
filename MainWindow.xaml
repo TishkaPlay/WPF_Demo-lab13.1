@@ -6,7 +6,27 @@
         xmlns:local="clr-namespace:WPF_Demo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="myGrid" Margin="10,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Grid.Column="2" Content="Title of App"/>
+        <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Content="Sample Text!"/>
+        <Button Grid.Row="4" Grid.Column="1" Content="A" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold" Background="Red" Width="197" FontFamily="Wide Latin" Margin="0,5,0,0"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="B" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold" Margin="0,5,0,0" Width="197" Background="#FF00D6FF" FontFamily="Wide Latin" Foreground="White" RenderTransformOrigin="0.737,0.495" Click="Button_Click"/>
 
     </Grid>
 </Window>
